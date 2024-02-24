@@ -1,19 +1,30 @@
+body{background-color: aliceblue
+    ;}
+
 h1{
     text-transform: uppercase;
     color: red;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 60px;
+    font-size: 42px;
+    background-color: aqua;
+    border-radius: 30px;
+    border-spacing: 50cm;
 }
 
 h2{
     text-transform: lowercase;
     font-size: 48px;
     font-style: italic;
-    text-decoration: chartreus2;
+   
 }
 p{
     font-size: 20px;
     text-indent: 2px;
-    text-align: center;
+    align-items: center;
     color: #0000FF;
+}
+#ola{
+    background-color: rgb(123, 0, 238);
+    border-radius: 50px;
+    color: black;
 }
