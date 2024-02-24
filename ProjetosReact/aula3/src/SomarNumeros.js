@@ -21,11 +21,10 @@ function SomarNumeros() {
     return (
         <div>
             <label>Digite um número</label>
-            <input type='text' onClick={capturarNumeroUm}></input>
-            <input type='text' onClick={capturarNumeroDois}></input>
+            <input type='text' onChange={capturarNumeroUm}></input>
+            <input type='text' onChange={capturarNumeroDois}></input>
             <p>Resultado: {result}</p>
             <button onClick={somarNumeros}>Somar</button>
-
         </div>
     )
 }

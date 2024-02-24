@@ -12,13 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      {/*  <FrasePrincipal></FrasePrincipal>
-      <DataHora></DataHora>
+  
       <ContadorComUseState></ContadorComUseState>
       <h2>-----------------------------------------------------------------</h2>
        <SomarNumeros></SomarNumeros> 
-  */}
-     <Contador></Contador>
     </div>
 
   );
