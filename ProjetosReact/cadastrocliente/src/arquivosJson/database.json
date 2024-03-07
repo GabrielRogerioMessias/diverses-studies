@@ -1,24 +1,40 @@
 {
-    "tarefas": [
+    "cidades": [
         {
             "id": 1,
-            "titulo": "Comprar leite",
-            "concluida": false
+            "nomecidade": "Joaquim-Távora"
         },
         {
             "id": 2,
-            "titulo": "Pagar contas",
-            "concluida": false
+            "nomecidade": "Curitiba"
         },
         {
             "id": 3,
-            "titulo": "Estudar programação",
-            "concluida": true
+            "nomecidade": "Londrina"
         },
         {
             "id": 4,
-            "titulo": "Vender o carro",
-            "concluida": true
+            "nomecidade": "Maringá"
+        },
+        {
+            "id": 5,
+            "nomecidade": "Ponta Grossa"
+        },
+        {
+            "id": 6,
+            "nomecidade": "Paranavaí"
+        },
+        {
+            "id": 7,
+            "nomecidade": "Foz do Iguaçu"
+        },
+        {
+            "id": 8,
+            "nomecidade": "Francisco Beltrão"
+        },
+        {
+            "id": 9,
+            "nomecidade": "Guarapuava"
         }
     ]
 }

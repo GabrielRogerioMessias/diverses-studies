@@ -32,7 +32,7 @@ function CadastroCliente() {
 
     return (
         <div className="principal" style={{ margin: '0 20%' }}>
-            <h1 style={{ textAlign: 'center' }}>Cadastro de Clientes</h1>
+            <h1 id="title" style={{ textAlign: 'center' }}>Cadastro de Clientes</h1>
             <Card>
                 <div className="cardPrincipal">
                     <label className='labelInput'> Nome </label>
@@ -48,7 +48,7 @@ function CadastroCliente() {
 
                     <label className='labelInput'> Data de Nascimento</label>
                     <Calendar id="dataNascimento" value={dataNascimento} onChange={(e) => { setDataNascimento(e.target.value) }} />
-                    <Button label="Enviar" onClick={enviarDados} />
+                    <Button className="button" label="Enviar" onClick={enviarDados} />
                 </div>
             </Card>
         </div>
