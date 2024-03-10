@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JS</title>
+    <style>
+        body {
+            background-color: azure;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+        }
+
+        .input {
+            flex-direction: column;
+            /* align-items: center; */
+            display: flex;
+            width: 50%;
+        }
+
+        #buttonSomar {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input">
+        <input type="number" id="inputNumber1">
+        <input type="number" id="inputNumber2">
+        <button id="buttonSomar">Somar</button>
+        <p id="result">Resultado: </p>
+    </div>
+
+    <script>
+        var butSomar = document.getElementById('buttonSomar')
+        butSomar.addEventListener('click', somar)
+        function somar() {
+            var input1 = document.getElementById('inputNumber1')
+            var input2 = document.getElementById('inputNumber2')
+            var number1 = parseFloat(input1.value)
+            var number2 = parseFloat(input2.value)
+            result = number1 + number2
+            document.getElementById('result').innerText = 'Resultado: ' + result
+
+        }
+
+    </script>
+
+</body>
+
+</html>
