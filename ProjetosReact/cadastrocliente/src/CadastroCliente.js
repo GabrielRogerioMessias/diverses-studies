@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
+import axios from 'axios';
 
 function CadastroCliente() {
     const [nome, setNome] = useState('')
@@ -11,7 +12,6 @@ function CadastroCliente() {
     const [email, setEmail] = useState('')
     const [dataNascimento, setDataNascimento] = useState('')
     const [cidadeSelecionada, setCidadeSelecionada] = useState('')
-
     const coletarNome = (event) => {
         setNome(event.target.value)
         console.log('name: ' + nome)
@@ -21,10 +21,25 @@ function CadastroCliente() {
         console.log('Endereco: ' + endereco)
     }
     const enviarDados = () => {
-        console.log('Enviando dados para o banco de Dadoss')
-        console.log('' + nome)
     }
+
+    useEffect(() => {
+        // Carregar dados da API, de maneira assincrona (tela abre, e a requisição já começa a buscar os dados)
+        const buscarDados = async () => {
+            try {
+                var API_URL = 'http://localhost:4000/cidades'
+                const response = await axios.get(API_URL)
+                console.log(response.data)
+            } catch (error) {
+                console.log('Não foi possivel carregar os dados de: ' + API_URL)
+            }
+        }
+        buscarDados();
+    }
+        ,)
+
     const cidades = [
+
         { label: 'Ourinhos', value: 'OU' },
         { label: 'Joaquim-Tavorá', value: 'JT' },
         { label: 'Santo-Antônio', value: 'SAP' }

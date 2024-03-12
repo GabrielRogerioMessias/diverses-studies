@@ -1,40 +1,48 @@
 {
-    "cidades": [
-        {
-            "id": 1,
-            "nomecidade": "Joaquim-Távora"
-        },
-        {
-            "id": 2,
-            "nomecidade": "Curitiba"
-        },
-        {
-            "id": 3,
-            "nomecidade": "Londrina"
-        },
-        {
-            "id": 4,
-            "nomecidade": "Maringá"
-        },
-        {
-            "id": 5,
-            "nomecidade": "Ponta Grossa"
-        },
-        {
-            "id": 6,
-            "nomecidade": "Paranavaí"
-        },
-        {
-            "id": 7,
-            "nomecidade": "Foz do Iguaçu"
-        },
-        {
-            "id": 8,
-            "nomecidade": "Francisco Beltrão"
-        },
-        {
-            "id": 9,
-            "nomecidade": "Guarapuava"
-        }
-    ]
+  "cidades": [
+    {
+      "id": "1",
+      "nomecidade": "Joaquim-Távora"
+    },
+    {
+      "id": "2",
+      "nomecidade": "Curitiba"
+    },
+    {
+      "id": "3",
+      "nomecidade": "Londrina"
+    },
+    {
+      "id": "4",
+      "nomecidade": "Maringá"
+    },
+    {
+      "id": "5",
+      "nomecidade": "Ponta Grossa"
+    },
+    {
+      "id": "6",
+      "nomecidade": "Paranavaí"
+    },
+    {
+      "id": "7",
+      "nomecidade": "Foz do Iguaçu"
+    },
+    {
+      "id": "8",
+      "nomecidade": "Francisco Beltrão"
+    },
+    {
+      "id": "9",
+      "nomecidade": "Guarapuava"
+    },
+    {
+      "id": "10",
+      "nomecidade": "Ribeirão do Pinhal"
+    },
+    {
+      "id": "11",
+      "nomecidade": "Carlopolis"
+    }
+  ]
 }
