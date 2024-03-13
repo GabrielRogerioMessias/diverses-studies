@@ -7,20 +7,31 @@ import { Dropdown } from 'primereact/dropdown';
 import axios from 'axios';
 
 function CadastroCliente() {
-    const [nome, setNome] = useState('')
-    const [endereco, setEndereco] = useState('')
-    const [email, setEmail] = useState('')
-    const [dataNascimento, setDataNascimento] = useState('')
-    const [cidadeSelecionada, setCidadeSelecionada] = useState('')
-    const coletarNome = (event) => {
-        setNome(event.target.value)
-        console.log('name: ' + nome)
-    }
+    const [nome, setNome] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [email, setEmail] = useState('');
+    const [dataNascimento, setDataNascimento] = useState('');
+    const [cidadeSelecionada, setCidadeSelecionada] = useState('');
+    const [cities, setCities] = useState([]);
+    //Fazer Post na Api
+    const [dadosDoForm, setDadosDoForm] = useState({
+        //dados que vamos enviar para a API
+        nome: '',
+        endereco: ''
+    });
+
+
     const coletarEndereco = (event) => {
         setEndereco(event.target.value)
         console.log('Endereco: ' + endereco)
     }
+
     const enviarDados = () => {
+        setDadosDoForm((dadosDoForm) => ({
+            ...dadosDoForm,
+            nome: nome,
+            endereco: endereco
+        }));
     }
 
     useEffect(() => {
@@ -30,6 +41,12 @@ function CadastroCliente() {
                 var API_URL = 'http://localhost:4000/cidades'
                 const response = await axios.get(API_URL)
                 console.log(response.data)
+                // const cidadesFormatadas = response.data.map(city => ({
+                //     label: city.nomecidade,
+                //     label: city.id,
+                // }))
+                // setCities(cidadesFormatadas)
+                setCities(response.data)
             } catch (error) {
                 console.log('Não foi possivel carregar os dados de: ' + API_URL)
             }
@@ -38,12 +55,6 @@ function CadastroCliente() {
     }
         ,)
 
-    const cidades = [
-
-        { label: 'Ourinhos', value: 'OU' },
-        { label: 'Joaquim-Tavorá', value: 'JT' },
-        { label: 'Santo-Antônio', value: 'SAP' }
-    ]
 
     return (
         <div className="principal" style={{ margin: '0 20%' }}>
@@ -59,7 +70,7 @@ function CadastroCliente() {
                     <label className='labelInput'> Email</label>
                     <InputText className="input" value={email} onChange={(e) => { setEmail(e.target.value) }} />
 
-                    <Dropdown value={cidadeSelecionada} options={cidades} onChange={(e) => { setCidadeSelecionada(e.value) }} placeholder="Selecione a Cidade" />
+                    <Dropdown value={cidadeSelecionada} options={cities} onChange={(e) => { setCidadeSelecionada(e.value) }} placeholder="Selecione a Cidade" optionLabel='nomecidade' />
 
                     <label className='labelInput'> Data de Nascimento</label>
                     <Calendar id="dataNascimento" value={dataNascimento} onChange={(e) => { setDataNascimento(e.target.value) }} />
