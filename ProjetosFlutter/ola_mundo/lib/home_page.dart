@@ -14,14 +14,20 @@ class HomePageState extends State<HomePage> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(
+            child: Text(
+          'HomePage',
+          style: TextStyle(fontSize: 44, color: Colors.deepOrangeAccent),
+        )),
+        backgroundColor: Colors.indigo,
+      ),
+      body: Center(
           child: GestureDetector(
-        child: Card(
-          child: Text(
-            'Contador: $counter',
-            style: const TextStyle(color: Colors.deepPurple, fontSize: 55),
-          ),
+        child: Text(
+          'Contador: $counter',
+          style: const TextStyle(color: Colors.deepPurple, fontSize: 35),
         ),
         onTap: () {
           setState(() {
@@ -29,6 +35,14 @@ class HomePageState extends State<HomePage> {
           });
         },
       )),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+        },
+      ),
     );
   }
 }
