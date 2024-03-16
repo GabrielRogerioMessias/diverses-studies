@@ -32,6 +32,7 @@ function CadastroCliente() {
             nome: nome,
             endereco: endereco
         }));
+
     }
 
     useEffect(() => {
