@@ -23,18 +23,24 @@ class HomePageState extends State<HomePage> {
         )),
         backgroundColor: Colors.indigo,
       ),
-      body: Center(
-          child: GestureDetector(
-        child: Text(
-          'Contador: $counter',
-          style: const TextStyle(color: Colors.deepPurple, fontSize: 35),
+      // Componentes como Container são single render, ou seja, quando colocamos um dentro do outro
+      // e passamos instruções como 2 quadrados, o de dentro sendo menor e o de fora maior
+      // a cor que passarmos para o quadrado 2 será a mesma do quadrado 1.
+      // para resolver isso, devemos usar elementos de alinhamento, pois assim teremos um multi render e poderemos ver a cor
+      //dos dois quadrados.
+      body: Container(
+        width: 200,
+        height: 200,
+        color: Colors.black,
+        child: Align(
+          alignment: Alignment.center,
+          child: Container(
+            width: 50,
+            height: 50,
+            color: const Color.fromARGB(255, 46, 46, 48),
+          ),
         ),
-        onTap: () {
-          setState(() {
-            counter++;
-          });
-        },
-      )),
+      ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
