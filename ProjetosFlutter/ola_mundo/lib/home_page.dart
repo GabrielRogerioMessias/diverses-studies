@@ -26,8 +26,7 @@ class HomePageState extends State<HomePage> {
       // Componentes como Container são single render, ou seja, quando colocamos um dentro do outro
       // e passamos instruções como 2 quadrados, o de dentro sendo menor e o de fora maior
       // a cor que passarmos para o quadrado 2 será a mesma do quadrado 1.
-      // para resolver isso, devemos usar elementos de alinhamento, pois assim teremos um multi render e poderemos ver a cor
-      //dos dois quadrados.
+      // para resolver isso, devemos usar elementos de alinhamento, pois assim teremos a visualização dos 2
       body: Container(
         width: 200,
         height: 200,
@@ -37,7 +36,7 @@ class HomePageState extends State<HomePage> {
           child: Container(
             width: 50,
             height: 50,
-            color: const Color.fromARGB(255, 46, 46, 48),
+            color: const Color.fromARGB(255, 0, 0, 246),
           ),
         ),
       ),
