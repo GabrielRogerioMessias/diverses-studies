@@ -56,7 +56,7 @@ class CounterHomeState extends State<CounterApp> {
         ),
         onTap: () {
           setState(() {
-            counter++;
+            counter = counter + 1;
           });
         },
       ),

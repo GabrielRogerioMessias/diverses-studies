@@ -45,5 +45,17 @@
       "nomecidade": "Carlopolis"
     }
   ],
-  "clientes": []
+  "clientes": [
+    {
+      "id": "9167",
+      "nome": "asdbasdasdads",
+      "endereco": "asad",
+      "dataNascimento": "",
+      "email": "asdasd",
+      "cidadeSelecionada": {
+        "id": "1",
+        "nomecidade": "Joaquim-Távora"
+      }
+    }
+  ]
 }
