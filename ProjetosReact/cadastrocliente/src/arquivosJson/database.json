@@ -47,15 +47,12 @@
   ],
   "clientes": [
     {
-      "id": "9167",
-      "nome": "asdbasdasdads",
-      "endereco": "asad",
-      "dataNascimento": "",
-      "email": "asdasd",
-      "cidadeSelecionada": {
-        "id": "1",
-        "nomecidade": "Joaquim-Távora"
-      }
+      "nome": "gabri",
+      "endereco": "rua m",
+      "dataNascimento": "2024-04-25T03:00:00.000Z",
+      "email": "ga.mc",
+      "cidadeSelecionada": "",
+      "id": "9dab"
     }
   ]
 }

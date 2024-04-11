@@ -1,0 +1,26 @@
+.generate-password-container {
+
+    display: flex;
+    align-items: center;
+    height: 900px;
+    justify-content: center;
+}
+
+.container-components {
+    background-color: rgb(161, 60, 145);
+    border-radius: 16px;
+    height: 500px;
+    width: 450px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title-components {
+    font-family: sans-serif;
+    color: rgb(3, 3, 3);
+    background-color: rgb(255, 46, 46);
+    border-radius: 16px;
+    padding: 6px;
+}
